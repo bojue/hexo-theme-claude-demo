@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Claude入门指南 | hexo-theme-claude Demo</title>
+<meta name="author" content="John Doe">
+<meta name="description" content="">
+
+
+
+<meta name="theme-color" content="#faf9f5">
+
+<!-- OpenGraph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Claude入门指南 | hexo-theme-claude Demo">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://bojue.github.io/hexo-theme-claude-demo/2026/09/01/claude-getting-started/index.html">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;600&family=Noto+Sans+SC:wght@400;500;600;600&display=swap" rel="stylesheet">
+
+<!-- Theme Stylesheet -->
+<link rel="stylesheet" href="/hexo-theme-claude-demo/css/claude.css">
+
+<meta name="generator" content="Hexo 8.1.2"></head>
+<body
+  data-i18n-copy="Copy"
+  data-i18n-copied="Copied"
+  data-i18n-copy-error="Failed"
+>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+  <div class="container nav-inner">
+    <!-- Brand & Search -->
+    <div style="display: flex; align-items: center; gap: 1.25rem;">
+      <a href="/hexo-theme-claude-demo/" class="brand-logo" aria-label="Claude">
+        <span>Claude</span>
+      </a>
+
+      
+      <button id="search-trigger" class="search-trigger" aria-label="Search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <span class="search-label" style="display: none;">Search</span>
+        <kbd class="search-kbd">⌘K</kbd>
+      </button>
+      
+    </div>
+
+    <!-- Navigation & Tools -->
+    <div class="nav-actions">
+      <nav class="nav-links">
+        
+          
+          <a href="/hexo-theme-claude-demo/" class="nav-link ">
+            文章
+          </a>
+        
+          
+          <a href="/hexo-theme-claude-demo/archives" class="nav-link ">
+            归档
+          </a>
+        
+          
+          <a href="/hexo-theme-claude-demo/about" class="nav-link ">
+            关于
+          </a>
+        
+      </nav>
+
+      <div style="width: 1px; height: 1rem; background-color: var(--border-color); margin: 0 0.25rem;"></div>
+
+      
+      <a href="https://github.com/bojue/hexo-theme-claude" target="_blank" rel="noopener noreferrer" class="icon-btn" title="GitHub" aria-label="GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+      
+    </div>
+  </div>
+</header>
+
+<style>
+  @media (min-width: 640px) {
+    .search-label { display: inline !important; }
+  }
+</style>
+
+
+  <!-- Main Content -->
+  <main id="main-content" style="flex: 1;">
+    <div class="container-wide">
+  <div class="post-layout">
+
+    <!-- Main Article Column -->
+    <article class="post-content-column">
+      <!-- Header -->
+      <header class="post-header">
+        <div class="meta">
+          <time datetime="2026-08-31T16:00:00.000Z">2026-09-01</time>
+          
+            <span style="opacity: 0.5;">·</span>
+            <span>Academy</span>
+          
+          
+        </div>
+
+        <h1 class="title">Claude入门指南</h1>
+      </header>
+
+      <!-- Markdown Prose Content -->
+      <div class="prose">
+        <p>Claude 是由 Anthropic 开发的 AI 助手。它可以阅读您的文档、起草和编辑内容、在您的各种工具间协同工作，并与您一起推理解决难题。以下是您第一天需要了解的内容，以及当您逐渐上手后可以前往的地方。</p>
+<h2 id="您的第一个提示"><a href="#您的第一个提示" class="headerlink" title="您的第一个提示"></a>您的第一个提示</h2><p>只需用日常语言向 Claude 写下您的需求。下面的提示会有所帮助，如果您的请求中有任何不清楚的地方，您可以让 Claude 在开始之前先向您提问。您可以附加文档，为它提供更多参考信息。</p>
+<p><strong>示例提示：</strong></p>
+<blockquote>
+<p>我错过了今天早上的计划会议。会议记录已附上。告诉我决定了什么、现在我需要做什么，以及在明天的站会之前我应该跟进什么。请用几条要点概括，方便我在通话间隙阅读。</p>
+</blockquote>
+<p><strong>这个提示为 Claude 提供了什么：</strong></p>
+<ol>
+<li><strong>上下文。</strong> 这项工作的目的：在这里，是一场您错过的会议。</li>
+<li><strong>任务。</strong> 您想要得到的结果：决定事项、您的行动项，以及需要跟进的内容。</li>
+<li><strong>格式。</strong> 长度和形式：几条要点。</li>
+<li><strong>材料。</strong> 会议记录已附上，因此 Claude 可以根据实际内容进行处理。</li>
+</ol>
+<p><strong>几个可以先了解的控件：</strong></p>
+<ul>
+<li>添加文件</li>
+<li>连接您的工具</li>
+<li>输出</li>
+<li>模型</li>
+</ul>
+<p>您的第一个提示不必完美无缺。如果答案不太对，直接说出来，Claude 会进行调整。再往下一点，您将设置一个属于您自己的任务，连接您的文件和工具。</p>
+<h2 id="Claude-的回复可以是什么样子"><a href="#Claude-的回复可以是什么样子" class="headerlink" title="Claude 的回复可以是什么样子"></a>Claude 的回复可以是什么样子</h2><p>Claude 会以任务所需的任何形式作答，而这份形式清单还在不断增加。请求您真正需要的东西——无论是一个简单的答案、一张内嵌绘制的图表、一份演示文稿、一个在对话中制作的设计或文档、一份 Excel 电子表格，还是一份您可以照着做的食谱。Claude 负责制作，您负责把控方向。</p>
+<h2 id="设置您的第一个任务"><a href="#设置您的第一个任务" class="headerlink" title="设置您的第一个任务"></a>设置您的第一个任务</h2><p>当任务需要时，“+”菜单还提供了一些其他选项：</p>
+<ul>
+<li><strong><a target="_blank" rel="noopener" href="https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities">连接器（Connectors）</a></strong>：让 Claude 能够读取并在您已经使用的应用中执行操作，例如您的邮箱、日历、云盘、聊天工具和 CRM。开启一次，之后每次对话都可以搜索它、引用它，并在您允许的情况下写回它。<a target="_blank" rel="noopener" href="https://claude.com/connectors">浏览目录</a>。</li>
+<li><strong><a target="_blank" rel="noopener" href="https://support.claude.com/en/articles/10684626-enable-and-use-web-search">网页搜索</a></strong>：在 Free、Pro 和 Max 方案中默认开启。在 Team 和 Enterprise 方案中默认关闭，管理员可以将其开启。当答案应该只来自您的文档时，请将其关闭。</li>
+<li><strong><a target="_blank" rel="noopener" href="https://support.claude.com/en/articles/11088861-use-research-on-claude">Research（研究）</a></strong>：运行多次搜索并返回一份带引用的简报。这需要几分钟时间，请将其留给重大问题使用。</li>
+<li><strong><a target="_blank" rel="noopener" href="https://support.claude.com/en/articles/12512176-what-are-skills">Skills（技能）</a></strong>：为您每次都以相同方式完成的工作保存的指令，包括您希望随时调用的语气或格式。在 Claude 桌面应用中，您还可以录制自己完成一次任务的过程，并将其保存为技能。</li>
+<li><strong>添加文件夹</strong>（<a href="/zh-CN/tutorials/navigating-the-claude-desktop-app">桌面应用</a>）：将您电脑上的整个文件夹交给 Claude 读取和保存内容，而不必逐个上传文件。</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research">了解何时使用网页搜索、扩展思考和 Research</a>。</p>
+<h2 id="Claude-会记住什么"><a href="#Claude-会记住什么" class="headerlink" title="Claude 会记住什么"></a>Claude 会记住什么</h2><p>一旦您向 Claude 说明了您的项目、您的团队，或您喜欢的工作方式，您就不必再重复解释一遍。有几项功能会将重要信息延续下去，让每次对话都从上一次结束的地方开始：</p>
+<ul>
+<li><strong><a target="_blank" rel="noopener" href="https://support.claude.com/en/articles/9517075-what-are-projects">Projects（项目）</a></strong>：一个用于承载某项持续进行工作的空间。添加 Claude 应始终随手可用的文件，写下几行说明（品牌语气、格式、绝不能忘记的事项），项目内的每次对话从一开始就已经了解这些内容。当您发现自己总是重复上传相同的文件或反复解释相同的规则时，就可以创建一个项目。</li>
+<li><strong><a target="_blank" rel="noopener" href="https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features">Claude 的指令</a></strong>：在您的设置资料中写下的一段简短说明，Claude 会在每次对话中牢记，例如您是谁、应该假设什么，以及应该如何与您交流。设置一次，便会在各处生效。</li>
+<li><strong><a target="_blank" rel="noopener" href="https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context">Memory（记忆）</a></strong>：Claude 在各次对话中记住的关于您的信息，例如您的团队、您的项目，以及您喜欢的工作方式。在设置中开启它，它会随着您的使用逐渐完善；您可以随时查看或编辑它。</li>
+</ul>
+<h2 id="聊天窗口之外"><a href="#聊天窗口之外" class="headerlink" title="聊天窗口之外"></a>聊天窗口之外</h2><p>大多数人从聊天开始使用。同样的 Claude 也出现在其他一些地方，针对不同类型的工作进行了相应调整。</p>
+<ul>
+<li><a href="/zh-CN/tutorials/navigating-the-claude-desktop-app">桌面应用</a> 将同样的聊天功能带到您的电脑上，在 Mac 上还增加了随处可用的快速输入、截图和听写功能。</li>
+<li><a target="_blank" rel="noopener" href="https://support.claude.com/en/articles/14552382-your-first-day-in-claude-code">Claude Code</a> 是终端和编辑器中的 Claude，面向工程师和开发者。</li>
+<li><a target="_blank" rel="noopener" href="https://support.claude.com/en/articles/14604416-get-started-with-claude-design">Claude Design</a> 现在可以从任意对话或侧边栏的 Design 标签页启动。它以画板形式呈现界面、流程和原型，您可以在自己的设计系统中手动编辑。</li>
+<li><a target="_blank" rel="noopener" href="https://support.claude.com/en/articles/15594475-what-is-claude-tag">Claude Tag</a> 将 Claude 带入您团队的 Slack 工作区。在频道或话题中 @Claude，它就会在那里执行任务，依据对话内容以及管理员已连接的工具来工作。</li>
+<li>Claude 还运行在您已经使用的应用程序内部：<a target="_blank" rel="noopener" href="https://claude.com/docs/office-agents/excel">Excel</a>、<a target="_blank" rel="noopener" href="https://claude.com/docs/office-agents/word">Word</a>、<a target="_blank" rel="noopener" href="https://claude.com/docs/office-agents/powerpoint">PowerPoint</a>、<a target="_blank" rel="noopener" href="https://claude.com/docs/office-agents/outlook">Outlook</a>、<a target="_blank" rel="noopener" href="https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome">Chrome</a>，以及<a target="_blank" rel="noopener" href="https://support.claude.com/en/collections/9387080-claude-mobile-apps">移动端</a>。</li>
+</ul>
+<h2 id="向-Claude-询问关于-Claude-的问题"><a href="#向-Claude-询问关于-Claude-的问题" class="headerlink" title="向 Claude 询问关于 Claude 的问题"></a>向 Claude 询问关于 Claude 的问题</h2><p>当您不确定某个按钮的作用，或为什么某个答案不尽如人意时，Claude 可以帮您排查问题：</p>
+<ul>
+<li><strong>询问某项功能如何运作：</strong> <em>“Research 功能是做什么的？我什么时候应该用它而不是网页搜索？”</em></li>
+<li><strong>获得更精准的提示以改进您的输出：</strong> <em>“向我提问，了解我想要做什么，然后为我写一个更好的提示。”</em></li>
+<li><strong>截图您不认识的内容：</strong> Claude 可以读取图片。放入任意 Claude 界面的截图，询问某个功能的作用。</li>
+</ul>
+
+      </div>
+
+      <!-- Post Nav (Previous & Next Post Cards) -->
+      
+        <nav class="post-nav-container">
+          
+            <a href="/hexo-theme-claude-demo/2026/10/07/deploy/" class="post-nav-card">
+              <span class="label">&larr; Previous</span>
+              <span class="title">使用 GitHub Pages</span>
+            </a>
+          
+
+          
+        </nav>
+      
+    </article>
+
+    <!-- Right Column: Sticky Table of Contents (Desktop >= 1024px) -->
+    
+      <aside class="post-toc-column">
+        <div class="toc-card">
+          <div class="toc-header">
+            <span>On this page</span>
+          </div>
+
+          <nav class="toc-nav">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%82%A8%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%8F%90%E7%A4%BA"><span class="toc-text">您的第一个提示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Claude-%E7%9A%84%E5%9B%9E%E5%A4%8D%E5%8F%AF%E4%BB%A5%E6%98%AF%E4%BB%80%E4%B9%88%E6%A0%B7%E5%AD%90"><span class="toc-text">Claude 的回复可以是什么样子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E6%82%A8%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BB%BB%E5%8A%A1"><span class="toc-text">设置您的第一个任务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Claude-%E4%BC%9A%E8%AE%B0%E4%BD%8F%E4%BB%80%E4%B9%88"><span class="toc-text">Claude 会记住什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%81%8A%E5%A4%A9%E7%AA%97%E5%8F%A3%E4%B9%8B%E5%A4%96"><span class="toc-text">聊天窗口之外</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%91-Claude-%E8%AF%A2%E9%97%AE%E5%85%B3%E4%BA%8E-Claude-%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">向 Claude 询问关于 Claude 的问题</span></a></li></ol>
+          </nav>
+        </div>
+      </aside>
+    
+
+  </div>
+</div>
+
+<style>
+  /* Standardize Hexo generated TOC markup into Claude CSS */
+  .toc-nav ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+  .toc-nav li {
+    margin: 0;
+  }
+  .toc-nav .toc-child {
+    padding-left: 0.875rem;
+  }
+  .toc-nav .toc-link {
+    display: block;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    border-radius: 0 0.25rem 0.25rem 0;
+    border-left: 2px solid transparent;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .toc-nav .toc-link:hover {
+    color: var(--text-primary);
+    background-color: var(--bg-subtle);
+  }
+  .toc-nav .toc-link.active {
+    color: var(--brand);
+    background-color: var(--brand-subtle);
+    border-left: 2px solid var(--brand);
+    font-weight: 500;
+  }
+</style>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <span>&copy; 2026 Claude</span>
+      
+        <span style="margin: 0 0.375rem; opacity: 0.5;">·</span>
+        <span>MIT License</span>
+      
+    </div>
+
+    <div class="footer-links">
+      
+        <a href="/hexo-theme-claude-demo/">文章</a>
+      
+        <a href="/hexo-theme-claude-demo/archives">归档</a>
+      
+        <a href="/hexo-theme-claude-demo/about">关于</a>
+      
+      <a href="javascript:void(0)" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Top &uarr;</a>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Search Modal -->
+  
+<div id="search-modal" class="search-modal-backdrop"
+     data-i18n-hint="Type to search by title, content or tag..."
+     data-i18n-empty="No search index available"
+     data-i18n-no-results="No matching articles found">
+  <div class="search-modal">
+    <div class="search-input-wrapper">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted); flex-shrink: 0;">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input 
+        id="search-input" 
+        class="search-input" 
+        type="text" 
+        placeholder="Search articles by title, content or tag (⌘K)..." 
+        autocomplete="off" 
+        spellcheck="false"
+        data-search-path="/hexo-theme-claude-demo/search.json"
+      >
+      <kbd class="search-kbd" style="cursor: pointer;" onclick="closeSearch()">ESC</kbd>
+    </div>
+    <div id="search-results" class="search-results">
+      <div style="padding: 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.8125rem;">
+        Type to search by title, content or tag...
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Scripts -->
+  <script src="/hexo-theme-claude-demo/js/main.js"></script>
+  
+    <script src="/hexo-theme-claude-demo/js/search.js"></script>
+  
+</body>
+</html>

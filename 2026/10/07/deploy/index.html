@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>使用 GitHub Pages | hexo-theme-claude Demo</title>
+<meta name="author" content="John Doe">
+<meta name="description" content="">
+
+
+
+<meta name="theme-color" content="#faf9f5">
+
+<!-- OpenGraph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 GitHub Pages | hexo-theme-claude Demo">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://bojue.github.io/hexo-theme-claude-demo/2026/10/07/deploy/index.html">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;600&family=Noto+Sans+SC:wght@400;500;600;600&display=swap" rel="stylesheet">
+
+<!-- Theme Stylesheet -->
+<link rel="stylesheet" href="/hexo-theme-claude-demo/css/claude.css">
+
+<meta name="generator" content="Hexo 8.1.2"></head>
+<body
+  data-i18n-copy="Copy"
+  data-i18n-copied="Copied"
+  data-i18n-copy-error="Failed"
+>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+  <div class="container nav-inner">
+    <!-- Brand & Search -->
+    <div style="display: flex; align-items: center; gap: 1.25rem;">
+      <a href="/hexo-theme-claude-demo/" class="brand-logo" aria-label="Claude">
+        <span>Claude</span>
+      </a>
+
+      
+      <button id="search-trigger" class="search-trigger" aria-label="Search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <span class="search-label" style="display: none;">Search</span>
+        <kbd class="search-kbd">⌘K</kbd>
+      </button>
+      
+    </div>
+
+    <!-- Navigation & Tools -->
+    <div class="nav-actions">
+      <nav class="nav-links">
+        
+          
+          <a href="/hexo-theme-claude-demo/" class="nav-link ">
+            文章
+          </a>
+        
+          
+          <a href="/hexo-theme-claude-demo/archives" class="nav-link ">
+            归档
+          </a>
+        
+          
+          <a href="/hexo-theme-claude-demo/about" class="nav-link ">
+            关于
+          </a>
+        
+      </nav>
+
+      <div style="width: 1px; height: 1rem; background-color: var(--border-color); margin: 0 0.25rem;"></div>
+
+      
+      <a href="https://github.com/bojue/hexo-theme-claude" target="_blank" rel="noopener noreferrer" class="icon-btn" title="GitHub" aria-label="GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+      
+    </div>
+  </div>
+</header>
+
+<style>
+  @media (min-width: 640px) {
+    .search-label { display: inline !important; }
+  }
+</style>
+
+
+  <!-- Main Content -->
+  <main id="main-content" style="flex: 1;">
+    <div class="container-wide">
+  <div class="post-layout">
+
+    <!-- Main Article Column -->
+    <article class="post-content-column">
+      <!-- Header -->
+      <header class="post-header">
+        <div class="meta">
+          <time datetime="2026-10-07T04:48:00.112Z">2026-10-07</time>
+          
+          
+        </div>
+
+        <h1 class="title">使用 GitHub Pages</h1>
+      </header>
+
+      <!-- Markdown Prose Content -->
+      <div class="prose">
+        <p>搭建一个用 <code>hexo-theme-claude</code> 生成的静态博客，然后部署到 GitHub Pages。</p>
+<h3 id="1-创建一个演示博客仓库"><a href="#1-创建一个演示博客仓库" class="headerlink" title="1. 创建一个演示博客仓库"></a>1. <strong>创建一个演示博客仓库</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建新的 Hexo 项目</span></span><br><span class="line">hexo init hexo-theme-claude-demo</span><br><span class="line"><span class="built_in">cd</span> hexo-theme-claude-demo</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-安装主题"><a href="#2-安装主题" class="headerlink" title="2. 安装主题"></a>2. <strong>安装主题</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/bojue/hexo-theme-claude.git themes/hexo-theme-claude</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-配置-Hexo"><a href="#3-配置-Hexo" class="headerlink" title="3. 配置 Hexo"></a>3. <strong>配置 Hexo</strong></h3><p>编辑根目录 <code>_config.yml</code>：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">hexo-theme-claude</span> <span class="string">Demo</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">hexo-theme-claude</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://bojue.github.io/hexo-theme-claude-demo</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/hexo-theme-claude-demo/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-生成并部署"><a href="#4-生成并部署" class="headerlink" title="4. 生成并部署"></a>4. <strong>生成并部署</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 GitHub Pages 部署工具</span></span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置部署（在 _config.yml 末尾添加）</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/bojue/hexo-theme-claude-demo.git</span><br><span class="line">  branch: gh-pages</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成并部署</span></span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+      </div>
+
+      <!-- Post Nav (Previous & Next Post Cards) -->
+      
+        <nav class="post-nav-container">
+          
+            <div></div>
+          
+
+          
+            <a href="/hexo-theme-claude-demo/2026/09/01/claude-getting-started/" class="post-nav-card" style="text-align: right;">
+              <span class="label">Next &rarr;</span>
+              <span class="title">Claude入门指南</span>
+            </a>
+          
+        </nav>
+      
+    </article>
+
+    <!-- Right Column: Sticky Table of Contents (Desktop >= 1024px) -->
+    
+      <aside class="post-toc-column">
+        <div class="toc-card">
+          <div class="toc-header">
+            <span>On this page</span>
+          </div>
+
+          <nav class="toc-nav">
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%BC%94%E7%A4%BA%E5%8D%9A%E5%AE%A2%E4%BB%93%E5%BA%93"><span class="toc-text">1. 创建一个演示博客仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98"><span class="toc-text">2. 安装主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%85%8D%E7%BD%AE-Hexo"><span class="toc-text">3. 配置 Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%94%9F%E6%88%90%E5%B9%B6%E9%83%A8%E7%BD%B2"><span class="toc-text">4. 生成并部署</span></a></li></ol>
+          </nav>
+        </div>
+      </aside>
+    
+
+  </div>
+</div>
+
+<style>
+  /* Standardize Hexo generated TOC markup into Claude CSS */
+  .toc-nav ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+  .toc-nav li {
+    margin: 0;
+  }
+  .toc-nav .toc-child {
+    padding-left: 0.875rem;
+  }
+  .toc-nav .toc-link {
+    display: block;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    border-radius: 0 0.25rem 0.25rem 0;
+    border-left: 2px solid transparent;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .toc-nav .toc-link:hover {
+    color: var(--text-primary);
+    background-color: var(--bg-subtle);
+  }
+  .toc-nav .toc-link.active {
+    color: var(--brand);
+    background-color: var(--brand-subtle);
+    border-left: 2px solid var(--brand);
+    font-weight: 500;
+  }
+</style>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <span>&copy; 2026 Claude</span>
+      
+        <span style="margin: 0 0.375rem; opacity: 0.5;">·</span>
+        <span>MIT License</span>
+      
+    </div>
+
+    <div class="footer-links">
+      
+        <a href="/hexo-theme-claude-demo/">文章</a>
+      
+        <a href="/hexo-theme-claude-demo/archives">归档</a>
+      
+        <a href="/hexo-theme-claude-demo/about">关于</a>
+      
+      <a href="javascript:void(0)" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Top &uarr;</a>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Search Modal -->
+  
+<div id="search-modal" class="search-modal-backdrop"
+     data-i18n-hint="Type to search by title, content or tag..."
+     data-i18n-empty="No search index available"
+     data-i18n-no-results="No matching articles found">
+  <div class="search-modal">
+    <div class="search-input-wrapper">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted); flex-shrink: 0;">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input 
+        id="search-input" 
+        class="search-input" 
+        type="text" 
+        placeholder="Search articles by title, content or tag (⌘K)..." 
+        autocomplete="off" 
+        spellcheck="false"
+        data-search-path="/hexo-theme-claude-demo/search.json"
+      >
+      <kbd class="search-kbd" style="cursor: pointer;" onclick="closeSearch()">ESC</kbd>
+    </div>
+    <div id="search-results" class="search-results">
+      <div style="padding: 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.8125rem;">
+        Type to search by title, content or tag...
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Scripts -->
+  <script src="/hexo-theme-claude-demo/js/main.js"></script>
+  
+    <script src="/hexo-theme-claude-demo/js/search.js"></script>
+  
+</body>
+</html>
